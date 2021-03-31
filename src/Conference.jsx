@@ -165,6 +165,8 @@ class Conference extends React.Component {
     } = this.props;
 
     console.log('SETTINGS:', settings);
+    console.log(localVideoEnabled);
+    console.log(localAudioEnabled);
 
     client
       .getLocalStream({
@@ -173,7 +175,7 @@ class Conference extends React.Component {
         bitrate: settings.bandwidth,
         frameRate: settings.frameRate,
         shouldPublishAudio: localAudioEnabled,
-        shouldPublishVideo: localVideoEnabled,
+        shouldPublishVideo: true,
         advancedMediaConstraints: {
           video: {
             deviceId: settings.selectedVideoDevice,

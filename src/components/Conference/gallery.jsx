@@ -19,20 +19,20 @@ const Gallery = ({
   return (
     <>
       <div
-        className={`relative w-full flex flex-wrap justify-center items-center`}
-        style={{ height: 'calc(100vh - 128px)', backgroundColor: '#1a1619' }}
+        className={`grid grid-cols-3`}
+        style={{ height: 'calc(100vh - 128px)',backgroundColor: '#1a1619'}}
       >
         <ContainerDimensions>
           {({ width, height }) => {
             let w = '100%';
             let h = '100%';
-            if (videoCount > 0) {
+            if (videoCount > 1) {
               let largestRectObj = largestRect(
                 width,
                 height,
                 videoCount,
-                160,
-                90
+                40,
+                10
               );
               w = largestRectObj.width;
               h = largestRectObj.height;

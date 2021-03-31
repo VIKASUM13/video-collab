@@ -7,6 +7,8 @@ import ChatBubble from './chatbubble';
 import ChatInput from './chatinput';
 import './style.scss';
 
+
+
 export default class ChatFeed extends Component {
   constructor(props) {
     super(props);
@@ -72,10 +74,13 @@ export default class ChatFeed extends Component {
         className="flex flex-1 flex-col"
         style={{ backgroundColor: '#000000' }}
       >
+      
         <div className="title-panel">
           <span className="title-chat">Chat</span>
+          
         </div>
-
+        
+        <button type="button" className="btn-close btn-close-white" ></button>
         <div ref="chat" className="chat-history">
           <div>{this._renderMessages(this.props.messages)}</div>
         </div>

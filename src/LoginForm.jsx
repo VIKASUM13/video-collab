@@ -672,7 +672,7 @@ class LoginForm extends React.Component {
                   <div className="overflow-hidden shadow rounded-lg max-w-sm w-full px-4 py-5 sm:p-6 bg-gray-100">
                     <div className="">
                       <h2 className="mt-6 mb-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
-                        100ms Conference
+                         Video chat with Client 
                       </h2>
                     </div>
 

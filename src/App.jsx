@@ -382,6 +382,11 @@ class App extends React.Component {
       vidFit,
     } = this.state;
     return (
+      <Layout>
+        <Content className="canvas_area" >
+          <canvas></canvas>
+        </Content>
+        <Sider className="video_area" width="400">
       <Layout className="app-layout">
         <Header
           className="app-header"
@@ -394,9 +399,6 @@ class App extends React.Component {
           }}
         >
           <div className="app-header-left">
-            <a href="https://100ms.live/" target="_blank">
-              <img src={bLogo} className="h-8" />
-            </a>
           </div>
           <div className="app-header-right">
             <MediaSettings
@@ -468,6 +470,9 @@ class App extends React.Component {
           )}
         </Content>
       </Layout>
+      </Sider>
+      </Layout>
+    
     );
   }
 }
