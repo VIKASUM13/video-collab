@@ -19,8 +19,8 @@ const Gallery = ({
   return (
     <>
       <div
-        className={`grid grid-cols-3`}
-        style={{ height: 'calc(100vh - 128px)',backgroundColor: '#1a1619'}}
+        className={`relative w-full justify-center items-center grid grid-cols-2 grid-flow-col`}
+        style={{ height: 'calc(100vh - 128px)',backgroundColor: '#1a1619',display:'grid'}}
       >
         <ContainerDimensions>
           {({ width, height }) => {
@@ -31,8 +31,8 @@ const Gallery = ({
                 width,
                 height,
                 videoCount,
-                40,
-                10
+                20,
+                20
               );
               w = largestRectObj.width;
               h = largestRectObj.height;

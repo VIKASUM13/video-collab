@@ -764,7 +764,7 @@ class LoginForm extends React.Component {
                                         this.roomId = '';
                                       }}
                                     />
-                                    100ms Conference
+                                    Conference
                                   </>
                                 )}
                               </h2>

@@ -398,8 +398,7 @@ class App extends React.Component {
             width: '100%',
           }}
         >
-          <div className="app-header-left">
-          </div>
+          <div className="app-header-left"></div>
           <div className="app-header-right">
             <MediaSettings
               onMediaSettingsChanged={this._onMediaSettingsChanged}
@@ -420,15 +419,16 @@ class App extends React.Component {
                 collapsed={this.state.collapsed}
                 style={{ backgroundColor: '#0B0F15' }}
               >
-                <div className="left-container">
+              <div className="left-container">
                   <ChatFeed
                     messages={this.state.messages}
                     onSendMessage={this._onSendMessage}
                   />
                 </div>
-              </Sider>
+                </Sider>
+
               <Layout className="app-right-layout">
-                <Content style={{ flex: 1, position: 'relative' }}>
+                <Content style={{ flex: 1, position: 'relative', width:'100%'}}>
                   <div>
                     <Conference
                       roomName={this.roomName}
