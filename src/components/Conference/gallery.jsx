@@ -19,7 +19,7 @@ const Gallery = ({
   return (
     <>
       <div
-        className={`relative w-full justify-center items-center grid grid-cols-2 grid-flow-col`}
+        className={`relative w-full grid grid-cols-2`}
         style={{ height: 'calc(100vh - 128px)',backgroundColor: '#1a1619',display:'grid'}}
       >
         <ContainerDimensions>

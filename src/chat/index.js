@@ -58,6 +58,7 @@ export default class ChatFeed extends Component {
     // return nodes
     return message_nodes;
   }
+  
 
   render() {
     window.setTimeout(() => {
@@ -77,10 +78,9 @@ export default class ChatFeed extends Component {
       
         <div className="title-panel">
           <span className="title-chat">Chat</span>
-          
+          <span><button type="button" className="chat-close" onClick={this.props.onChatToggle}>Close</button></span>
         </div>
         
-        <button type="button" className="btn-close btn-close-white" ></button>
         <div ref="chat" className="chat-history">
           <div>{this._renderMessages(this.props.messages)}</div>
         </div>

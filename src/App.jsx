@@ -414,8 +414,8 @@ class App extends React.Component {
               <Sider
                 width={320}
                 collapsedWidth={0}
-                trigger={null}
                 collapsible
+                trigger={null}
                 collapsed={this.state.collapsed}
                 style={{ backgroundColor: '#0B0F15' }}
               >
@@ -423,10 +423,13 @@ class App extends React.Component {
                   <ChatFeed
                     messages={this.state.messages}
                     onSendMessage={this._onSendMessage}
+                    isChatOpen={this.state.collapsed}
+                    onChatToggle={() =>
+                      this._openOrCloseLeftContainer(!collapsed)
+                    }
                   />
                 </div>
                 </Sider>
-
               <Layout className="app-right-layout">
                 <Content style={{ flex: 1, position: 'relative', width:'100%'}}>
                   <div>
@@ -457,6 +460,8 @@ class App extends React.Component {
                   </div>
                 </Content>
               </Layout>
+            
+            
             </Layout>
           ) : loading ? (
             <Spin size="large" tip="Connecting..." />

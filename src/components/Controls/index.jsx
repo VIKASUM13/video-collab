@@ -24,7 +24,7 @@ const Controls = ({
 }) => {
   return (
     <div
-      className="h-16 absolute w-full justify-center bottom-0 flex items-center py-1"
+      className="h-16 relative w-full justify-center bottom-0 flex items-center py-1"
       style={{ backgroundColor: '#1a1619' }}
     >
       <div className="mr-1">
