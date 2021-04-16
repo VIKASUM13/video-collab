@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Modal, notification, Spin } from 'antd';
 const { confirm } = Modal;
-const { Header, Content, Sider } = Layout;
+const { Header, Content, Sider,Footer } = Layout;
 import { reactLocalStorage } from 'reactjs-localstorage';
 import MediaSettings from './settings';
 import ChatFeed from './chat/index';
@@ -410,17 +410,15 @@ class App extends React.Component {
 
         <Content className="app-center-layout">
           {login ? (
-            <Layout className="app-content-layout">
-              <Sider
-                width={320}
-                collapsedWidth={0}
-                collapsible
-                trigger={null}
-                collapsed={this.state.collapsed}
-                style={{ backgroundColor: '#0B0F15' }}
-              >
-              <div className="left-container">
-                  <ChatFeed
+         <Layout className="app-content-layout">
+
+           <Sider  width={320}
+                 collapsedWidth={0}
+                 collapsible
+                 trigger={null}
+                 collapsed={this.state.collapsed}>
+                  <div className="left-container">
+             <ChatFeed 
                     messages={this.state.messages}
                     onSendMessage={this._onSendMessage}
                     isChatOpen={this.state.collapsed}
@@ -428,9 +426,9 @@ class App extends React.Component {
                       this._openOrCloseLeftContainer(!collapsed)
                     }
                   />
-                </div>
-                </Sider>
-              <Layout className="app-right-layout">
+                  </div>
+            </Sider>
+         <Layout className="app-right-layout">
                 <Content style={{ flex: 1, position: 'relative', width:'100%'}}>
                   <div>
                     <Conference
@@ -459,10 +457,12 @@ class App extends React.Component {
                     />
                   </div>
                 </Content>
-              </Layout>
-            
-            
+              
+                  
             </Layout>
+           
+            
+           </Layout>
           ) : loading ? (
             <Spin size="large" tip="Connecting..." />
           ) : (
