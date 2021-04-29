@@ -9,6 +9,8 @@ import Message from './chat/message';
 import bLogo from '../public/logo-blue-dark.svg';
 import '../styles/css/app.scss';
 
+import Threecomp from './components/three/Threecomp';
+
 import LoginForm from './LoginForm';
 import Conference from './Conference';
 import { HMSClient, HMSPeer, HMSClientConfig } from '@100mslive/hmsvideo-web';
@@ -384,7 +386,7 @@ class App extends React.Component {
     return (
       <Layout>
         <Content className="canvas_area" >
-          <canvas></canvas>
+          <Threecomp id="container"></Threecomp>
         </Content>
         <Sider className="video_area" width="400">
       <Layout className="app-layout">
